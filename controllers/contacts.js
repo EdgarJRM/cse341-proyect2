@@ -42,7 +42,10 @@ const createUser = async (req, res) => {
         lastName: req.body.lastName,
         email: req.body.email,
         favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday
+        birthday: req.body.birthday,
+        cellPhone: req.body.cellPhone,
+        address: req.body.address,
+        nationality: req.body.nationality
     };
     const response = await mongodb.getDatabase().db().collection('contacts').insertOne(contact);
     if(response.acknowledged){
@@ -63,7 +66,10 @@ const updateUser = async (req, res) => {
         lastName: req.body.lastName,
         email: req.body.email,
         favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday
+        birthday: req.body.birthday,
+        cellPhone: req.body.cellPhone,
+        address: req.body.address,
+        nationality: req.body.nationality
     };
     const response = await mongodb.getDatabase().db().collection('contacts').replaceOne({ _id: contactsId}, contact);
     if(response.modifiedCount > 0){

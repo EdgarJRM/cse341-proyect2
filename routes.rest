@@ -3,7 +3,7 @@
 GET http://localhost:3000/contacts
 
 ### Get Contacts by id
-GET http://localhost:3000/contacts/65063cc1a6d938d7c38ea552
+GET http://localhost:3000/contacts/651890d341608223168b07d3
 
 ### Create contat
 POST http://localhost:3000/contacts HTTP/1.1
@@ -14,7 +14,10 @@ content-type: application/json
   "lastName": "ROBOCOP",
   "email": "ppdsadfrz@gmail.com",
   "favoriteColor": "Yellow",
-  "birthday": "April 25, 1986"
+  "birthday": "April 25, 1986",
+  "cellPhone": "+999888777",
+  "address": "555 Main St",
+  "nationality": "US"
 }
 
 ### PUT contact
@@ -23,11 +26,58 @@ content-type: application/json
 
 {
   "firstName": "Maria",
-  "lastName": "XiaLiu",
-  "email": "rertexia@gmail.com",
-  "favoriteColor": "Black",
-  "birthday": "July 14, 1997"
+  "lastName": "Pachas",
+  "email": "pachaspachas@gmail.com",
+  "favoriteColor": "Yellow",
+  "birthday": "April 30, 1999",
+  "cellPhone": "+999888777",
+  "address": "111 Main St",
+  "nationality": "Peru"
 }
 
 ### DELETE contact
-DELETE  http://localhost:3000/contacts/6514f109c695b9aaa11d97ab HTTP/1.1
+DELETE  http://localhost:3000/contacts/65189012b728c4e6617acb59 HTTP/1.1
+
+
+
+//......... Orders .........//
+### Get all Orders
+GET http://localhost:3000/orders
+
+### Get Orders by id
+GET http://localhost:3000/orders/6518a673a9adf482ba930017
+
+### Create Orders
+POST http://localhost:3000/orders HTTP/1.1
+content-type: application/json
+
+{
+  "customer": "SAGA FALABELLA",
+  "brand": "Sybilla",
+  "code": "27040",
+  "model": "Top",
+  "color": "Red",
+  "amount": "308",
+  "sizes": "XS-S-M-L-XL",
+  "price": "12.50",
+  "dispatchDate": "April 30"
+}
+
+### PUT Orders
+PUT http://localhost:3000/orders/6518a7fed4779a362dc8dd93 HTTP/1.1
+content-type: application/json
+
+{
+  "customer": "Amazon",
+  "brand": "Basement",
+  "code": "27040",
+  "model": "Top",
+  "color": "Off White",
+  "amount": "308",
+  "sizes": "S-M-L",
+  "price": "15",
+  "dispatchDate": "Nov 6"
+}
+
+### DELETE Orders
+DELETE  http://localhost:3000/orders/6518a673a9adf482ba930017 HTTP/1.1
