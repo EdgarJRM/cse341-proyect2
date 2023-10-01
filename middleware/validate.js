@@ -31,7 +31,7 @@ const saveOrder = (req, res, next) => {
     code: 'required|integer',
     model: 'required|string',
     color: 'required|string',
-    amount: 'required|integer',
+    quantity: 'required|integer',
     sizes: 'required|string',
     price: 'required|numeric',
     dispatchDate: 'required|date'

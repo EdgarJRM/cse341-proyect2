@@ -57,14 +57,14 @@ content-type: application/json
   "code": "27040",
   "model": "Top",
   "color": "Red",
-  "amount": "308",
+  "quantity": "308",
   "sizes": "XS-S-M-L-XL",
   "price": "12.50",
   "dispatchDate": "April 30"
 }
 
 ### PUT Orders
-PUT http://localhost:3000/orders/6518a7fed4779a362dc8dd93 HTTP/1.1
+PUT http://localhost:3000/orders/6518b5dc7b54a90bb9518478 HTTP/1.1
 content-type: application/json
 
 {
@@ -73,11 +73,11 @@ content-type: application/json
   "code": "27040",
   "model": "Top",
   "color": "Off White",
-  "amount": "308",
+  "quantity": "308",
   "sizes": "S-M-L",
   "price": "15",
   "dispatchDate": "Nov 6"
 }
 
 ### DELETE Orders
-DELETE  http://localhost:3000/orders/6518a673a9adf482ba930017 HTTP/1.1
+DELETE  http://localhost:3000/orders/6518b41f3aa02d72de40ad38 HTTP/1.1

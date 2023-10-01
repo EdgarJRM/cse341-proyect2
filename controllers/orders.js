@@ -43,7 +43,7 @@ const createOrder = async (req, res) => {
         code: req.body.code,
         model: req.body.model,
         color: req.body.color,
-        amount: req.body.amount,
+        quantity: req.body.quantity,
         sizes: req.body.sizes,
         price: req.body.price,
         dispatchDate: req.body.dispatchDate
@@ -68,7 +68,7 @@ const updateOrder = async (req, res) => {
         code: req.body.code,
         model: req.body.model,
         color: req.body.color,
-        amount: req.body.amount,
+        quantity: req.body.quantity,
         sizes: req.body.sizes,
         price: req.body.price,
         dispatchDate: req.body.dispatchDate

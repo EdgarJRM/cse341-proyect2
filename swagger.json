@@ -22,16 +22,6 @@
         }
       }
     },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/contacts/": {
       "get": {
         "description": "",
@@ -58,19 +48,28 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "example": "Carla"
                 },
                 "lastName": {
-                  "example": "any"
+                  "example": "Matos"
                 },
                 "email": {
-                  "example": "any"
+                  "example": "carlamatos@exemple.com"
                 },
                 "favoriteColor": {
-                  "example": "any"
+                  "example": "blue"
                 },
                 "birthday": {
-                  "example": "any"
+                  "example": "April 25, 1983"
+                },
+                "cellPhone": {
+                  "example": "+51968185250"
+                },
+                "address": {
+                  "example": "555 Main St"
+                },
+                "nationality": {
+                  "example": "US"
                 }
               }
             }
@@ -124,6 +123,214 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "Carla"
+                },
+                "lastName": {
+                  "example": "Matos"
+                },
+                "email": {
+                  "example": "carlamatos@exemple.com"
+                },
+                "favoriteColor": {
+                  "example": "blue"
+                },
+                "birthday": {
+                  "example": "April 25, 1983"
+                },
+                "cellPhone": {
+                  "example": "+51968185250"
+                },
+                "address": {
+                  "example": "555 Main St"
+                },
+                "nationality": {
+                  "example": "US"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/orders/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customer": {
+                  "example": "OECHSLE"
+                },
+                "brand": {
+                  "example": "Disney"
+                },
+                "code": {
+                  "example": "2569847"
+                },
+                "model": {
+                  "example": "Pijama"
+                },
+                "color": {
+                  "example": "Melange Gray"
+                },
+                "quantity": {
+                  "example": "252"
+                },
+                "sizes": {
+                  "example": "S-M-L-XL"
+                },
+                "price": {
+                  "example": "17.5"
+                },
+                "dispatchDate": {
+                  "example": "October 25"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/orders/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customer": {
+                  "example": "OECHSLE"
+                },
+                "brand": {
+                  "example": "Disney"
+                },
+                "code": {
+                  "example": "2569847"
+                },
+                "model": {
+                  "example": "Pijama"
+                },
+                "color": {
+                  "example": "Melange Gray"
+                },
+                "quantity": {
+                  "example": "252"
+                },
+                "sizes": {
+                  "example": "S-M-L-XL"
+                },
+                "price": {
+                  "example": "17.5"
+                },
+                "dispatchDate": {
+                  "example": "October 25"
+                }
+              }
+            }
           }
         ],
         "responses": {
